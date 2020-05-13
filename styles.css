@@ -1,0 +1,93 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    vertical-align: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+    font-family: inherit;
+    text-align: inherit;
+    text-decoration: inherit;
+    color: inherit;
+    background-color: transparent; 
+}
+
+body {
+    font-size: 16px;
+    font-family: sans-serif;
+    line-height: 1.5rem;
+    font-weight: 400;
+    color: #eee;
+    vertical-align: top; /*this will break often cross device/browser*/
+    font-style: normal; 
+    text-align: left;
+    text-decoration: none;
+    background-color: #2d0033;
+    /* Fallback for old browsers */
+    /* WHYYYYYYYYYY */
+    -webkit-text-size-adjust: 100%;
+}
+
+h1 {
+    font-size: 1.5rem;
+    line-height: 2rem; /* included in selection area "bounding box"*/
+    padding-bottom: 0.25rem;
+}
+
+p {
+    color: #fff;
+    padding-bottom: 0.25rem;
+}
+p.altColor {
+    color: #936;
+}
+
+.selected { /*need to implement*/
+    font-weight: 800;
+}
+
+.boxContainer {
+    position: relative;
+    overflow: hidden;
+    padding: 0.5rem 0.5rem 0rem 0.5rem;
+
+}
+
+.boxContainer + .boxContainer { /*.thing followed by .thing*/
+    padding-top: 0rem;
+}
+
+.boxContainer .tab { /*every .box inside any .boxContainer*/
+    float: left;
+}
+
+.boxContainer.tabs-4 .tab {
+    width: 25%;
+}
+
+.tab {
+    margin: 0rem; /*outside*/ /*top and bottom margin can overlap*/
+    padding: 0.5rem; /*inside*/
+}
+
+.tabGuts {
+    background-color: #39c;
+    padding: 1rem;
+}
+
+.propic{
+    text-align: center;
+    align-items: center;
+    justify-content: center;   
+}
