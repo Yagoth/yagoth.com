@@ -20,7 +20,7 @@ html {
     text-align: inherit;
     text-decoration: inherit;
     color: inherit;
-    background-color: transparent; 
+    background-color: transparent;
 }
 
 body {
@@ -30,50 +30,92 @@ body {
     font-weight: 400;
     color: #eee;
     vertical-align: top; /*this will break often cross device/browser*/
-    font-style: normal; 
+    font-style: normal;
     text-align: left;
     text-decoration: none;
-    background-color: #2d0033;
+    background-color: #000;
     /* Fallback for old browsers */
     /* WHYYYYYYYYYY */
     -webkit-text-size-adjust: 100%;
 }
 
 h1 {
-    font-size: 1.5rem;
-    line-height: 2rem; /* included in selection area "bounding box"*/
+    font-size: 2rem;
+    line-height: 3rem; /* included in selection area "bounding box"*/
     padding-bottom: 0.25rem;
 }
 
-p {
-    color: #fff;
+h2 {
+    font-size: 1.7rem;
+    line-height: 2.4rem; /* included in selection area "bounding box"*/
     padding-bottom: 0.25rem;
 }
-p.altColor {
-    color: #936;
+
+h3 {
+    font-size: 1.3rem;
+    line-height: 1.6rem; /* included in selection area "bounding box"*/
+    padding-bottom: 0.25rem;
+}
+
+h4 {
+    font-size: 1.1rem;
+    line-height: 1.4rem; /* included in selection area "bounding box"*/
+    padding-bottom: 0.25rem;
+}
+
+
+p {
+    padding-bottom: 0.25rem;
+}
+
+hr {
+    display: block;
+    height: 2px;
+    background-color: #52057b;
+    margin: 2rem 0; /*outside*/ /*top and bottom margin can overlap*/
+}
+
+a {
+    color: #bc6ff1;
+}
+
+a:hover {
+    color: #892cdc;
+}
+
+a:visited {
+    color: #fff600;
+}
+
+.container{
+    padding: 2rem;
 }
 
 .selected { /*need to implement*/
     font-weight: 800;
 }
 
-.boxContainer {
+.box-container {
     position: relative;
     overflow: hidden;
     padding: 0.5rem 0.5rem 0rem 0.5rem;
-
+    margin: 0 -1rem;
 }
 
-.boxContainer + .boxContainer { /*.thing followed by .thing*/
+.box-container + .box-container { /*.thing followed by .thing*/
     padding-top: 0rem;
 }
 
-.boxContainer .tab { /*every .box inside any .boxContainer*/
+.box-container .tab { /*every .box inside any .box-container*/
     float: left;
 }
 
-.boxContainer.tabs-4 .tab {
+.box-container.tabs-4 .tab {
     width: 25%;
+}
+
+.box-container.tabs-2 .tab {
+    width: 50%;
 }
 
 .tab {
@@ -81,19 +123,25 @@ p.altColor {
     padding: 0.5rem; /*inside*/
 }
 
-.tabGuts {
-    background-color: #39c;
+.tab-guts {
+    background-color: #52057b;
     padding: 1rem;
 }
 
 .propic{
     text-align: center;
     align-items: center;
-    justify-content: center;   
+    justify-content: center;
 }
 
 .temppic{
     text-align: center;
     align-items: center;
-    justify-content: center;   
+    justify-content: center;
 }
+
+
+.shotmatch_image img{
+    width: 100%;
+}
+/*KHW ^ needs work */
